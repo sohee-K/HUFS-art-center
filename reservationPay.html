@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예매하기</title>
+    <link rel="stylesheet" href="./pages.css" />
+    <link rel="stylesheet" href="./reserve.css" />
+  </head>
+  <body>
+    <header class="reserve_header">
+      <img src="./image/logo.jpg" width="40px" alt="" />
+      <div><span class="reserve_date">예매 확정하기</span></div>
+      <div></div>
+    </header>
+    <section class="reservation_pay">
+      <div class="reserve_info">
+        <span class="title">예매 정보</span>
+        <hr />
+        <div class="info_div">
+          <div class="info__poster">
+            <img class="info__poster-image" width="220" src="" alt="" />
+          </div>
+          <span class="reserve_title">-</span>
+          <div class="info">
+            <span class="info_title">상영</span
+            ><span class="info__theater">-</span><br />
+            <span class="info_title">일시</span><span class="info__date">-</span
+            ><br />
+            <span class="info_title">인원</span
+            ><span class="info__count">-</span><br />
+            <span class="info_title">좌석</span
+            ><span class="info__seat">선택 가능</span><br />
+            <button
+              class="reserve_button"
+              onclick="window.open('./reservation.html', '_self', 'width=1200, height=700, scrollbars=yes, resizable=yes');"
+            >
+              이전으로 가기
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="reserve_seat">
+        <span class="title">좌석 선택하기</span>
+        <hr />
+        <div class="select_seat">
+          <div class="screen">screen</div>
+          <table class="seats">
+            <tr>
+              <th>A</th>
+              <td>A1</td>
+              <td>A2</td>
+              <td>A3</td>
+              <td>A4</td>
+              <td>A5</td>
+              <td>A6</td>
+              <td>A7</td>
+              <td>A8</td>
+              <td>A9</td>
+              <td>A0</td>
+              <th>A</th>
+            </tr>
+            <tr>
+              <th>B</th>
+              <td>B1</td>
+              <td>B2</td>
+              <td>B3</td>
+              <td>B4</td>
+              <td>B5</td>
+              <td>B6</td>
+              <td>B7</td>
+              <td>B8</td>
+              <td>B9</td>
+              <td>B0</td>
+              <th>B</th>
+            </tr>
+            <tr>
+              <th>C</th>
+              <td>C1</td>
+              <td>C2</td>
+              <td>C3</td>
+              <td>C4</td>
+              <td>C5</td>
+              <td>C6</td>
+              <td>C7</td>
+              <td>C8</td>
+              <td>C9</td>
+              <td>C0</td>
+              <th>C</th>
+            </tr>
+            <tr>
+              <th>D</th>
+              <td>D1</td>
+              <td>D2</td>
+              <td>D3</td>
+              <td>D4</td>
+              <td>D5</td>
+              <td>D6</td>
+              <td class="reserved">D7</td>
+              <td class="reserved">D8</td>
+              <td>D9</td>
+              <td>D0</td>
+              <th>D</th>
+            </tr>
+            <tr>
+              <th>E</th>
+              <td>E1</td>
+              <td class="reserved">E2</td>
+              <td>E3</td>
+              <td>E4</td>
+              <td class="reserved">E5</td>
+              <td>E6</td>
+              <td class="reserved">E7</td>
+              <td>E8</td>
+              <td>E9</td>
+              <td>E0</td>
+              <th>E</th>
+            </tr>
+            <tr>
+              <th>F</th>
+              <td>F1</td>
+              <td>F2</td>
+              <td>F3</td>
+              <td>F4</td>
+              <td>F5</td>
+              <td class="reserved">F6</td>
+              <td class="reserved">F7</td>
+              <td>F8</td>
+              <td>F9</td>
+              <td>F0</td>
+              <th>F</th>
+            </tr>
+            <tr>
+              <th>G</th>
+              <td>G1</td>
+              <td>G2</td>
+              <td class="reserved">G3</td>
+              <td class="reserved">G4</td>
+              <td>G5</td>
+              <td>G6</td>
+              <td>G7</td>
+              <td>G8</td>
+              <td class="reserved">G9</td>
+              <td>G0</td>
+              <th>G</th>
+            </tr>
+            <tr>
+              <th>H</th>
+              <td>H1</td>
+              <td>H2</td>
+              <td>H3</td>
+              <td>H4</td>
+              <td>H5</td>
+              <td>H6</td>
+              <td>H7</td>
+              <td>H8</td>
+              <td>H9</td>
+              <td>H0</td>
+              <th>H</th>
+            </tr>
+          </table>
+          <div class="selected_wrap">
+            <span class="seat_title">선택된 좌석</span
+            ><span class="selected_seat">&nbsp;</span>
+            <button class="selected_cancel" onclick="handleCancel();">초기화</button>
+          </div>
+        </div>
+      </div>
+      <div class="reserve_pay">
+        <span class="title">결제 금액</span>
+        <hr />
+        <div class="pay_wrap">
+          <span>상품명</span><br />
+          <p class="pay_title price_title"></p>
+          <span>상품가격</span><br />
+          <p class="pay_title">11,000 원</p>
+          <span>제공기간</span><br />
+          <p class="pay_title">별도제공기간없음</p>
+          <hr />
+          <p><span>결제금액</span><br/><p class="pay_title price"></p></p>
+          <button class="pay_button" onclick="handlePay();">결제하기</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const posterImage = document.querySelector(".info__poster-image");
+      const reserveTitle = document.querySelector(".reserve_title");
+      const reserveTheater = document.querySelector(".info__theater");
+      const reserveDate = document.querySelector(".info__date");
+      const reserveCount = document.querySelector(".info__count");
+      const reserveSeat = document.querySelector(".info__seat");
+      const seatList = document.querySelectorAll("td");
+      const selectedSeat = document.querySelector(".selected_seat");
+      const priceTitle = document.querySelector(".price_title");
+      const price = document.querySelector(".price");
+
+      const selected = {
+        title: null,
+        date: null,
+        time: null,
+        theater: null,
+        count: null,
+        seat: [],
+      };
+
+      let seats = [];
+      const seatTarget = [];
+
+      function handleCancel() {
+        seatList.forEach(seat => {
+          seats.forEach(s => {
+            if(s == seat.innerHTML) {
+              seat.style.color = 'rgb(0, 45, 86)';
+              seat.style.backgroundColor = 'rgb(0, 45, 86)';
+            }
+          });
+        });
+        seats = [];
+        selectedSeat.innerHTML = '&nbsp;'
+
+      }
+
+      function handlePay() {
+        if (seats.length === parseInt(selected.count)) {
+          selected.seat = seats;
+          let newList;
+          const savedData = localStorage.getItem("reservedList");
+          if (savedData) {
+            newList = JSON.parse(savedData);
+            newList.push(selected);
+          } else {
+            newList = [selected];
+          }
+          localStorage.setItem("reservedList", JSON.stringify(newList));
+          window.alert("예매가 완료되었습니다!");
+          seatTarget.forEach(target => target.classList.add("reserved"));
+          window.self.close();
+          // window.open('./reservationCheck.html', '_self', 'width=1200, height=700, scrollbars=yes, resizable=yes');
+        } else {
+          alert("좌석을 선택해 주세요!");
+        }
+      }
+
+      function handleClick(event) {
+        if (
+          event.target.className !== "reserved" &&
+          seats.length < selected.count
+        ) {
+          const seat = event.target.innerHTML;
+          selectedSeat.innerHTML += seat + ", ";
+          seats.push(seat);
+          event.target.style.backgroundColor = "rgb(141, 113, 80)";
+          event.target.style.color = "rgb(141, 113, 80)";
+          seatTarget.push(event.target);
+        }
+      }
+
+      function init() {
+        const data = JSON.parse(localStorage.getItem("tempData"));
+        selected.title = data.title;
+        selected.date = data.date;
+        selected.time = data.time;
+        selected.theater = data.theater;
+        selected.count = data.count;
+
+        price.innerHTML = (11 * data.count) + ",000 원";
+        posterImage.src = `./image/${data.title}.jpg`;
+        reserveTitle.innerHTML = data.title;
+        priceTitle.innerHTML = data.title;
+        reserveTheater.innerHTML = "HUFS아트센터 " + data.theater;
+        reserveCount.innerHTML = data.count + "명";
+        const date = data.date;
+        const year = parseInt(date / 10000) + "";
+        let month = parseInt((date % 10000) / 100) + "";
+        let day = parseInt(date % 100) + "";
+        month = month.length < 2 ? "0" + month : month;
+        day = day.length < 2 ? "0" + day : day;
+        reserveDate.innerHTML =
+          year + "-" + month + "-" + day + " " + data.time;
+      }
+
+      function seatInit() {
+        const data = JSON.parse(localStorage.getItem("tempData"));
+        const savedData = JSON.parse(localStorage.getItem("reservedList"));
+
+        seatList.forEach((seat) => {
+          seat.addEventListener("click", handleClick);
+          savedData.forEach(d => {
+            if (data.title === d.title && data.date === d.date && data.time === d.time) {
+              d.seat.forEach(s => {
+              if (s === seat.innerHTML) seat.classList.add("reserved");
+            });
+          }
+        });
+      });
+      }
+
+      seatInit();
+      init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+.login {
+  width: 1000px;
+  height: 80vh;
+  margin: 0 auto;
+}
+fieldset {
+  padding: 80px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fieldset {
+  padding: 80px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+h2,
+.join > h2 {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgb(141, 113, 80);
+  width: 100px;
+}
+.join > h2 {
+  width: 130px;
+}
+li {
+  font-size: 18px;
+  margin: 15px;
+}
+.login_bottom > a:visited,
+.login_bottom > a:link {
+  color: black;
+}
+.login_bottom {
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+}
+button {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 45, 86);
+  color: white;
+  font-size: 18px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.login_group > input[type="password"] {
+  margin-top: 25px;
+}
+label {
+  font-size: 16px;
+}
+.join {
+  width: 1000px;
+  margin: 0 auto;
+  height: 85vh;
+}
+.join > .fieldset {
+  padding: 50px;
+  margin-top: 30px;
+}
+.join_inputs > input,
+.join_inputs > select {
+  height: 20px;
+  width: 200px;
+  margin: 7px 0;
+}
+.join_inputs > select {
+  height: 30px;
+}
+.join_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.join_labels {
+  width: 130px;
+  line-height: 250%;
+}
+.checkbox > input {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+.checkbox > label {
+  font-size: 12px;
+}
+.join_fieldset {
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.buttons > button {
+  border: none;
+}
+.join_cancel {
+  background-color: rgb(157, 159, 162);
+  color: white;
+  margin-top: 20px;
+}
+.join_cancel:hover {
+  color: black;
+}
+.join_submit:hover {
+  color: rgb(141, 113, 80);
+}
+.star {
+  color: rgb(141, 113, 80);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

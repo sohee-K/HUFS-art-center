@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS아트센터</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./common.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./main.html" class="header--logo" target="_self"
+        >HUFS ART CENTER</a
+      >
+      <div class="header--empty"></div>
+      <a href="./login.html" class="header--login" target="_self">로그인</a>
+      <div>|</div>
+      <a href="./join.html" class="header--join" target="_self">회원가입</a>
+    </header>
+    <nav class="nav">
+      <div class="nav--container">
+        <a href="./info.html" target="_self">아트센터</a>
+        <a href="./movie.html" target="_self">영화</a>
+        <a href="./reserve.html" target="_self">예매</a>
+        <a href="" target="_self">프로그램</a>
+        <a href="" target="_self">고객센터</a>
+      </div>
+    </nav>
+    <figure class="poster">
+      <img
+        class="main-poster"
+        src="./image/mainPoster0.jpg"
+        alt="메인 포스터"
+      />
+      <div class="poster--bottom">
+        <div class="poster--container">
+          <div class="main-poster-desc">
+            아카데미 2관왕 숀펜 &amp; 멜 깁슨 &lt;프로페서 앤 매드맨&gt;
+          </div>
+          <div class="poster--numbers">
+            <div class="poster--number" onclick="changePoster(0);">1</div>
+            <div class="poster--number" onclick="changePoster(1);">2</div>
+            <div class="poster--number" onclick="changePoster(2);">3</div>
+            <div class="poster--number" onclick="changePoster(3);">4</div>
+            <div class="poster--number" onclick="changePoster(4);">5</div>
+          </div>
+        </div>
+      </div>
+    </figure>
+    <section class="movies">
+      <div class="movies--more">
+        <a href="./movie.html" target="_self">+ 전체보기</a>
+      </div>
+      <div class="movies--container">
+        <div
+          class="movies--name"
+          onmouseover="popUp(0);"
+          onmouseout="popDown(0);"
+        >
+          <div class="popup">
+            <p class="popup__title">미나리</p>
+            <p class="popup__desc">
+              드라마<br />1시간 56분<br />12세 관람가<br />2021.03.03 개봉<br />
+            </p>
+            <a href="./reserve.html"><button>예매하기</button></a>
+          </div>
+          <img src="./image/미나리.jpg" alt="미나리" />
+          <span>미나리</span><br />2021.03.03 개봉
+        </div>
+        <div
+          class="movies--name"
+          onmouseover="popUp(1);"
+          onmouseout="popDown(1);"
+        >
+          <div class="popup">
+            <p class="popup__title">내일의 기억</p>
+            <p class="popup__desc">
+              드라마<br />1시간 39분<br />15세 관람가<br />2021.03.06 개봉<br />
+            </p>
+            <a href="./reserve.html"><button>예매하기</button></a>
+          </div>
+          <img src="./image/내일의 기억.jpg" alt="내일의 기억" />
+          <span>내일의 기억</span><br />2021.03.06 개봉
+        </div>
+        <div
+          class="movies--name"
+          onmouseover="popUp(2);"
+          onmouseout="popDown(2);"
+        >
+          <div class="popup">
+            <p class="popup__title">비와 당신의 이야기</p>
+            <p class="popup__desc">
+              드라마<br />1시간 57분<br />전체 관람가<br />2021.03.15 개봉<br />
+            </p>
+            <a href="./reserve.html"><button>예매하기</button></a>
+          </div>
+          <img src="./image/비와 당신의 이야기.jpg" alt="비와 당신의 이야기" />
+          <span>비와 당신의 이야기</span><br />2021.03.15 개봉
+        </div>
+        <div
+          class="movies--name"
+          onmouseover="popUp(3);"
+          onmouseout="popDown(3);"
+        >
+          <div class="popup">
+            <p class="popup__title">파리의 별빛 아래</p>
+            <p class="popup__desc">
+              드라마<br />1시간 30분<br />전체 관람가<br />2021.03.21 개봉<br />
+            </p>
+            <a href="./reserve.html"><button>예매하기</button></a>
+          </div>
+          <img src="./image/파리의 별빛 아래.jpg" alt="파리의 별빛 아래" />
+          <span>파리의 별빛 아래</span><br />2021.03.21 개봉
+        </div>
+      </div>
+    </section>
+    <section class="ad">
+      <div class="ad--video">
+        <span class="ad--title">HD 예고편</span>
+        <iframe
+          width="672"
+          height="378"
+          src="https://www.youtube.com/embed/tfmRVC_GADw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay"
+        ></iframe>
+      </div>
+      <div class="ad--event">
+        <span class="ad--title">이벤트</span>
+        <div>
+          <img
+            width="300"
+            src="./image/어른들은 몰라요 이벤트.jpg"
+            alt="이벤트"
+          />
+          <span
+            ><span class="span--title"
+              >[현장 이벤트] &lt;어른들은 몰라요&gt;</span
+            ><br /><br />2021-04-13 ~ 2021-05-11</span
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer--container">
+        <img src="./image/logo.jpg" alt="logo" />
+        <div class="footer--title">HUFS<br />ART<br />CENTER</div>
+        <div>
+          02450 서울특별시 동대문구 이문로 107 Tel. 82-2-2173-2114<br />
+          홈페이지 제작자 <span>권소희 (juliette1017@hufs.ac.kr)</span><br />
+          Copyright ⓒ Hankuk University of Foreign Studies. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mainPoster = document.querySelector(".main-poster");
+      const description = document.querySelector(".main-poster-desc");
+      const numberList = document.querySelectorAll(".poster--number");
+      const movies = document.querySelectorAll(".movies--name");
+      let index = 0;
+
+      const descList = [
+        `아카데미 2관왕 숀펜 &amp; 멜 깁슨 &lt;프로페서 앤 매드맨&gt;`,
+        `그 때 너도 나와 같았을까? &lt;그 시절, 우리가 좋아했던 소녀&gt;`,
+        `제 22회 전주국제영화제 3관왕 &lt;낫아웃&gt;`,
+        `엄마가 나를 포기한 줄 알았어요 &lt;포겟 미 낫-엄마에게 쓰는 편지&gt;`,
+        `믿을 수 없는 충격 실화 살인사건의 범인 악마인가 인간인가 &lt;컨저링 3: 악마가 시켰다&gt;`,
+      ];
+
+      function changePoster(num) {
+        index = num;
+
+        mainPoster.src = `./image/mainPoster${num}.jpg`;
+        mainPoster.classList.remove("appear");
+        void mainPoster.offsetWidth;
+        mainPoster.classList.add("appear");
+
+        description.innerHTML = descList[num];
+
+        numberList.forEach(
+          (el) => (el.style.backgroundColor = "rgb(157, 159, 162)")
+        );
+        numberList[num].style.backgroundColor = "rgb(141, 113, 80)";
+      }
+
+      function popUp(i) {
+        document.querySelectorAll(".popup")[i].style.display = "block";
+      }
+      function popDown(i) {
+        document.querySelectorAll(".popup")[i].style.display = "none";
+      }
+
+      setInterval(() => {
+        index += 1;
+        if (index > 4) index = 0;
+        changePoster(index);
+      }, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS아트센터</title>
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./pages.css" />
+    <link rel="stylesheet" href="./reserve.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./main.html" class="header--logo" target="_self"
+        >HUFS ART CENTER</a
+      >
+      <div class="header--empty"></div>
+      <a href="./login.html" class="header--login" target="_self">로그인</a>
+      <div>|</div>
+      <a href="./join.html" class="header--join" target="_self">회원가입</a>
+    </header>
+    <nav class="nav">
+      <div class="nav--container">
+        <a href="./info.html" target="_self">아트센터</a>
+        <a href="./movie.html" target="_self">영화</a>
+        <a href="./reserve.html" target="_self">예매</a>
+        <a href="" target="_self">프로그램</a>
+        <a href="" target="_self">고객센터</a>
+      </div>
+    </nav>
+    <div class="movie_banner">
+      <img src="./image/theater.jpg" alt="" />
+      <p>예매 안내</p>
+    </div>
+    <section class="reserve__section">
+      <p class="notice">❗ 인터넷 예매시 주의사항<br /></p>
+      <ul class="notice__list">
+        <li>공지된 인터넷 예매 상황을 꼭 숙지하신 후 이용하시기 바랍니다.</li>
+        <li>
+          인터넷에 공지된 예매주의사항을 숙지하지 않아 발생하는 불이익에
+          대해서는 책임지지 않습니다.
+        </li>
+        <li>[예매하기] 링크 선택 시 예매 페이지로 넘어갑니다.</li>
+      </ul>
+      <div class="button__wrapper">
+        <button
+          class="button__reserve"
+          onclick="window.open('./reservation.html', 'PopupWin', 'width=1200, height=700, scrollbars=yes, resizable=yes');"
+        >
+          예매하기
+        </button>
+        <button
+          class="button__reserve-check"
+          onclick="window.open('./reservationCheck.html', 'PopupWin', 'width=1200, height=700, scrollbars=yes, resizable=yes');"
+        >
+          예매내역<br />확인하기
+        </button>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer--container">
+        <img src="./image/logo.jpg" alt="logo" />
+        <div class="footer--title">HUFS<br />ART<br />CENTER</div>
+        <div>
+          02450 서울특별시 동대문구 이문로 107 Tel. 82-2-2173-2114<br />
+          홈페이지 제작자 <span>권소희 (juliette1017@hufs.ac.kr)</span><br />
+          Copyright ⓒ Hankuk University of Foreign Studies. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

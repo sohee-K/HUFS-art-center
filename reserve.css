@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+}
+
+.notice {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.notice__list li {
+  list-style: circle;
+}
+
+.reserve__section {
+  width: 1000px;
+  height: 52vh;
+  margin: 0 auto;
+}
+
+.button__reserve,
+.button__reserve-check {
+  width: 140px;
+  height: 140px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+
+.button__reserve {
+  background-color: rgb(0, 45, 86);
+  color: white;
+}
+.button__reserve:hover {
+  cursor: pointer;
+  color: rgb(141, 113, 80);
+}
+.button__reserve-check {
+  background-color: rgb(141, 113, 80);
+  color: white;
+}
+.button__reserve-check:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.button__wrapper {
+  width: 600px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all {
+  list-style-image: url("./image/icon1.jpg");
+  background-size: 10px;
+}
+.twelve {
+  list-style-image: url("./image/icon2.jpg");
+}
+.fifteen {
+  list-style-image: url("./image/icon3.jpg");
+}
+.nineteen {
+  list-style-image: url("./image/icon4.jpg");
+}
+
+.title_list > li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reserve_header {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100vw;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: rgb(0, 45, 86);
+  color: white;
+  font-size: 24px;
+  font-weight: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reserve_header button {
+  background: none;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  margin: 0 10px;
+}
+
+.reserve_header button:hover {
+  color: rgb(157, 159, 162);
+  cursor: pointer;
+}
+
+.reserve_header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve_header > span {
+  font-size: 15px;
+}
+
+.reserve_header a {
+  color: white;
+  text-decoration: none;
+}
+
+.info__poster {
+  width: 220px;
+  height: 309.25px;
+  background-color: rgb(157, 159, 162);
+}
+
+.reservation_pay {
+  display: flex;
+  justify-content: center;
+}
+
+.reserve_seat {
+  width: 480px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.reserve_pay {
+  width: 200px;
+}
+
+.screen {
+  width: 400px;
+  height: 30px;
+  background-color: rgb(157, 159, 162);
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.select_seat {
+  width: 440px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.seats {
+  width: 300px;
+  height: 250px;
+  border-spacing: 5px;
+}
+
+.seats td {
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(0, 45, 86);
+  color: rgb(0, 45, 86);
+}
+.seats td:hover {
+  cursor: pointer;
+}
+
+.reserved {
+  background-color: rgb(157, 159, 162) !important;
+  color: rgb(157, 159, 162) !important;
+}
+.reserved:hover {
+  cursor: default !important;
+}
+
+.seat_title {
+  background-color: rgb(141, 113, 80);
+  color: black;
+  font-weight: bold;
+  padding: 3.5px 10px;
+}
+
+.selected_seat {
+  display: inline-block;
+  border: 2px solid rgb(141, 113, 80);
+  height: 23px;
+  width: 200px;
+  padding: 1px;
+  color: black;
+  font-weight: bold;
+}
+
+.selected_wrap {
+  height: 29px;
+  display: flex;
+}
+
+.selected_cancel {
+  height: 29px;
+  background-color: rgb(157, 159, 162);
+  color: black;
+  border: none;
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.selected_cancel:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pay_wrap {
+  background-color: rgb(0, 45, 86);
+  padding: 30px 10px;
+  height: 70vh;
+  color: white;
+}
+
+.pay_title {
+  font-weight: bold;
+  text-align: end;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.pay_button {
+  background-color: white;
+  color: rgb(0, 45, 86);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-top: 100px;
+  margin-left: 10px;
+  width: 160px;
+  height: 40px;
+}
+
+.pay_button:hover {
+  background-color: rgb(141, 113, 80);
+  cursor: pointer;
+}
+
+.reservation_check {
+  display: flex;
+  justify-content: center;
+}
+
+.reservation_list {
+  width: 200px;
+}
+
+.reservation_info {
+  width: 600px;
+  padding: 0 30px;
+}
+
+.reservation_info_wrap {
+  display: flex;
+  margin-top: 20px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+ol {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+ol li {
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ol li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reserve_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movie_info {
+  font-size: 14px;
+  color: rgb(157, 159, 162);
+  margin: 10px 0;
+}
+
+.info_title {
+  margin-right: 10px;
+}
+
+.info__date,
+.info__theater,
+.info__count,
+.info__seat {
+  font-weight: bold;
+  height: 30px;
+  display: inline-block;
+}
+
+.reserve_cancel {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(0, 45, 86);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.movie_info-desc {
+  box-sizing: border-box;
+  border: 1px solid rgb(157, 159, 162);
+  padding: 10px;
+  height: 30vh;
+  overflow: auto;
+}
+
+.check {
+  margin-left: 30px;
+}

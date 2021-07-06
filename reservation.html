@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예매하기</title>
+    <link rel="stylesheet" href="./pages.css" />
+    <link rel="stylesheet" href="./reserve.css" />
+  </head>
+  <body>
+    <header class="reserve_header">
+      <img src="./image/logo.jpg" width="40px" alt="" />
+      <div><button onclick="dateBack();">&lt;</button><span class="reserve_date">2021-06-11</span><button onclick="dateForward();">&gt;</button></div>
+      <span><a href="./login.html" alt="">로그인</a></span></header>
+    <section class="reserve">
+      <div class="reserve_list">
+        <span>전체 영화 (제목순)</span>
+        <hr />
+        <ul class="title_list">
+          <li class="fifteen" onclick="saveTitle('그 시절 우리가 좋아했던 소녀');">그 시절 우리가 좋아했던 소녀</li>
+          <li class="fifteen" onclick="saveTitle('내일의 기억');">내일의 기억</li>
+          <li class="twelve" onclick="saveTitle('노매드랜드');">노매드랜드</li>
+          <li class="fifteen" onclick="saveTitle('더 스파이');">더 스파이</li>
+          <li class="twelve" onclick="saveTitle('미나리');">미나리</li>
+          <li class="all" onclick="saveTitle('비와 당신의 이야기');">비와 당신의 이야기</li>
+          <li class="nineteen" onclick="saveTitle('서복');">서복</li>
+          <li class="all" onclick="saveTitle('파리의 별빛 아래');">파리의 별빛 아래</li>
+        </ul>
+      </div>
+      <div class="reserve_table">
+        <span>현재 상영중인 영화</span>&nbsp;&nbsp;<span class="date">2021-05-09</span>
+        <hr />
+        <ul>
+          <br />
+          <li class="fifteen">
+            <span class="title">그 시절 우리가 좋아했던 소녀</span><br /><br /><span>3관</span>
+            <div>
+              <button class="time" onclick="saveTitle('그 시절 우리가 좋아했던 소녀'); saveTime('13:15'); saveTheater('3관');">13:15</button
+              ><button class="time" onclick="saveTitle('그 시절 우리가 좋아했던 소녀'); saveTime('18:40'); saveTheater('3관');">18:40</button>
+              <br /><br /><span>4관</span>
+            <div>
+              <button class="time" onclick="saveTitle('그 시절 우리가 좋아했던 소녀'); saveTime('19:35'); saveTheater('4관');">09:35</button
+              ><button class="time" onclick="saveTitle('그 시절 우리가 좋아했던 소녀'); saveTime('20:25'); saveTheater('4관');">20:25</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="fifteen">
+            <span class="title">내일의 기억</span><br /><br /><span>1관</span>
+            <div>
+              <button class="time" onclick="saveTitle('내일의 기억'); saveTime('13:15'); saveTheater('1관');">13:15</button
+              >
+            </div><br/><span>2관</span><div><button class="time" onclick="saveTitle('내일의 기억'); saveTime('08:35'); saveTheater('2관');">08:35</button><button class="time" onclick="saveTitle('내일의 기억'); saveTime('21:40'); saveTheater('2관');">21:40</button></div>
+            <br />
+            <hr />
+          </li>
+          <li class="twelve">
+            <span class="title">노매드랜드</span><br /><br /><span>5관</span>
+            <div>
+              <button class="time" onclick="saveTitle('노매드랜드'); saveTime('14:20'); saveTheater('5관');">14:20</button
+              ><button class="time" onclick="saveTitle('노매드랜드'); saveTime('18:40'); saveTheater('5관');">18:40</button>
+              <button class="time" onclick="saveTitle('노매드랜드'); saveTime('22:10'); saveTheater('5관');">22:10</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="fifteen">
+            <span class="title">더 스파이</span><br /><br /><span>2관</span>
+            <div>
+              <button class="time" onclick="saveTitle('더 스파이'); saveTime('13:25'); saveTheater('2관');">13:25</button
+              ><button class="time" onclick="saveTitle('더 스파이'); saveTime('18:50'); saveTheater('2관');">18:50</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="twelve">
+            <span class="title">미나리</span><br /><br /><span>1관</span>
+            <div>
+              <button class="time" onclick="saveTitle('미나리'); saveTime('10:15'); saveTheater('1관');">10:15</button
+              ><button class="time" onclick="saveTitle('미나리'); saveTime('13:30'); saveTheater('1관');">13:30</button>
+              <button class="time" onclick="saveTitle('미나리'); saveTime('17:20'); saveTheater('1관');">17:20</button>
+              <button class="time" onclick="saveTitle('미나리'); saveTime('21:20'); saveTheater('1관');">21:20</button>
+            </div><br />
+            <span>5관</span>
+            <div>
+              <button class="time" onclick="saveTitle('미나리'); saveTime('14:35'); saveTheater('5관');">14:35</button
+              ><button class="time" onclick="saveTitle('미나리'); saveTime('18:55'); saveTheater('5관');">18:55</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="all">
+            <span class="title">비와 당신의 이야기</span><br /><br /><span>특별관</span>
+            <div>
+              <button class="time" onclick="saveTitle('비와 당신의 이야기'); saveTime('08:55'); saveTheater('특별관');">08:55</button
+              ><button class="time" onclick="saveTitle('비와 당신의 이야기'); saveTime('22:30'); saveTheater('특별관');">22:30</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="nineteen">
+            <span class="title">서복</span><br /><br /><span>특별관</span>
+            <div>
+              <button class="time" onclick="saveTitle('서복'); saveTime('11:35'); saveTheater('특별관');">11:35</button
+              ><button class="time" onclick="saveTitle('서복'); saveTime('16:10'); saveTheater('특별관');">16:10</button><button class="time" onclick="saveTitle('서복'); saveTime('24:55'); saveTheater('특별관');">24:55</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+          <li class="all">
+            <span class="title">파리의 별빛 아래</span><br /><br /><span>3관</span>
+            <div>
+              <button class="time" onclick="saveTitle('파리의 별빛 아래'); saveTime('15:10'); saveTheater('3관');">15:10</button
+              ><button class="time" onclick="saveTitle('파리의 별빛 아래'); saveTime('21:40'); saveTheater('3관');">21:40</button>
+              <button class="time" onclick="saveTitle('파리의 별빛 아래'); saveTime('24:10'); saveTheater('3관');">24:10</button>
+            </div>
+            <br />
+            <hr />
+          </li>
+        </ul>
+      </div>
+      <div class="reserve_info">
+        <span class="title">예매 정보</span>
+        <hr />
+        <div class="info_div">
+          <div class="info__poster"><img class="info__poster-image" width="220" src="" alt="" /></div>
+          <span class="reserve_title">-</span>
+          <div class="info">
+            <span class="info_title">상영</span><span class="info__theater">-</span><br/>
+            <span class="info_title">일시</span><span class="info__date">-</span><br/>
+            <span class="info_title">인원</span><select onchange="saveCount(event);">
+              <option value="1" selected>1명</option>
+              <option value="2">2명</option>
+              <option value="3">3명</option>
+              <option value="4">4명</option>
+            </select><br/>
+            <span class="info_title">좌석</span>선택 가능<br/>
+            <button class="reserve_button" onclick="saveData();">예매하기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const today = document.querySelector(".reserve_date");
+      const dateHeader = document.querySelector(".date");
+      const poster = document.querySelector(".info__poster-image");
+      const reserveTitle = document.querySelector(".reserve_title");
+      const reserveTheater = document.querySelector(".info__theater");
+      const reserveDate = document.querySelector(".info__date");
+
+      function getToday() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1 + "";
+        const monthF = month.length < 2 ? "0" + month : month;
+        const day = now.getDate() + "";
+        const dayF = day.length < 2 ? "0" + day : day;
+        return {year, monthF, dayF};
+      }
+
+      const {year, monthF, dayF} = getToday();
+      today.innerHTML = year + '-' + monthF + '-' + dayF;
+      dateHeader.innerHTML = year + '-' + monthF + '-' + dayF;
+      const todayDate = parseInt(year + monthF + dayF);
+
+      const selected = {
+        title: null,
+        date: parseInt(year + monthF + dayF),
+        time: null,
+        theater: null,
+        count: 1,
+        seat: [],
+      };
+
+      function getDays(month) {
+        switch(month) {
+          case 2:
+            return 28;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+            return 30;
+          default:
+            return 31;
+        }
+      }
+
+      function dateBack() {
+        if (selected.date > todayDate) {
+          let year = parseInt(selected.date / 10000);
+          let month = parseInt((selected.date % 10000) / 100);
+          let day = selected.date % 100;
+          day -= 1;
+          if (day === 0) {
+            if (month === 1) {
+              year -= 1;
+              month = 12;
+              day = getDays(month);
+            } else {
+              month -= 1;
+              day = getDays(month);
+            }
+          }
+          month = month + "";
+          day = day + "";
+          const monthF = month.length < 2 ? "0" + month : month;
+          const dayF = day.length < 2 ? "0" + day : day;
+          today.innerHTML = year + "-" + monthF + "-" + dayF;
+          dateHeader.innerHTML = year + "-" + monthF + "-" + dayF;
+          selected.date = parseInt(year + monthF + dayF);
+        }
+      }
+
+      function dateForward() {
+        let year = parseInt(selected.date / 10000);
+        let month = parseInt((selected.date % 10000) / 100);
+        let day = selected.date % 100;
+        day += 1;
+        if (day > getDays(month)) {
+          if (month === 12) {
+            year += 1;
+            month = 1;
+            day = 1;
+          } else {
+            month += 1;
+            day = 1;
+          }
+        }
+        month = month + "";
+        day = day + "";
+        const monthF = month.length < 2 ? "0" + month : month;
+        const dayF = day.length < 2 ? "0" + day : day;
+        today.innerHTML = year + "-" + monthF + "-" + dayF;
+        dateHeader.innerHTML = year + "-" + monthF + "-" + dayF;
+        selected.date = parseInt(year + monthF + dayF);
+      }
+
+      function saveTitle(title) {
+        selected.title = title;
+        reserveTitle.innerHTML = title;
+        poster.src = `./image/${title}.jpg`;
+      }
+
+      function saveTime(time) {
+        selected.time = time;
+        const year = parseInt(selected.date / 10000) + "";
+        let month = parseInt((selected.date % 10000) / 100) + "";
+        let day = parseInt(selected.date % 100) + "";
+        month = month.length < 2 ? "0" + month : month;
+        day = day.length < 2 ? "0" + day : day;
+        reserveDate.innerHTML = year + "-" + month + "-" + day + " " + time;
+      }
+
+      function saveTheater(theater) {
+        selected.theater = theater;
+        reserveTheater.innerHTML = "HUFS아트센터 " + theater;
+      }
+
+      function saveCount(event) {
+        selected.count = event.target.value;
+      }
+
+      function saveData() {
+        localStorage.setItem("tempData", JSON.stringify(selected));
+        window.open('./reservationPay.html', '_self', 'width=1200, height=700, scrollbars=yes, resizable=yes');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUFS아트센터:회원가입</title>
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./main.html" class="header--logo" target="_self"
+        >HUFS ART CENTER</a
+      >
+      <div class="header--empty"></div>
+      <a href="./login.html" class="header--login" target="_self">로그인</a>
+      <div>|</div>
+      <a href="./join.html" class="header--join" target="_self">회원가입</a>
+    </header>
+    <nav class="nav">
+      <div class="nav--container">
+        <a href="./info.html" target="_self">아트센터</a>
+        <a href="./movie.html" target="_self">영화</a>
+        <a href="./reserve.html" target="_self">예매</a>
+        <a href="" target="_self">프로그램</a>
+        <a href="" target="_self">고객센터</a>
+      </div>
+    </nav>
+    <section class="join">
+      <h2>회원 가입</h2>
+      <ul>
+        <li>
+          회원 가입은 무료이며, HUFS아트센터의 온라인 서비스를 자유롭게 이용하실
+          수 있습니다.
+        </li>
+      </ul>
+      <div class="fieldset">
+        <form method="POST" action="">
+          <div class="join_group">
+            <div class="join_labels">
+              <label for="join_id">아이디<span class="star">*</span></label
+              ><br />
+              <label for="join_pw">비밀번호<span class="star">*</span></label
+              ><br />
+              <label for="join_pw_check"
+                >비밀번호 확인<span class="star">*</span></label
+              ><br />
+              <label for="join_name">이름<span class="star">*</span></label
+              ><br />
+              <label for="join_email">이메일</label><br />
+              <label for="join_tel">전화번호<span class="star">*</span></label
+              ><br />
+              <label for="join_path">가입경로</label><br />
+              <label for="join_news">이메일 수신</label><br />
+            </div>
+            <div class="join_inputs">
+              <input
+                type="text"
+                name="id"
+                id="join_id"
+                placeholder="영문 및 숫자 8자 이상"
+                required
+                pattern="[a-z0-9]{8,20}"
+              /><br />
+              <input
+                type="password"
+                name="pw"
+                id="join_pw"
+                placeholder="영문, 숫자 및 특수문자 10자 이상"
+                pattern="[a-z0-9!@#$%^&*]{10,20}"
+                required
+              /><br />
+              <input
+                type="password"
+                name="pw"
+                id="join_pw_check"
+                placeholder="영문, 숫자 및 특수문자 10자 이상"
+                pattern="[a-z0-9!@#$%^&*]{10,20}"
+                required
+              /><br />
+              <input type="text" name="name" id="join_name" required /><br />
+              <input type="email" name="email" id="join_email" /><br />
+              <input
+                type="tel"
+                name="tel"
+                id="join_tel"
+                placeholder="형식) 010-0000-0000"
+                pattern="010-[0-9]{4}-[0-9]{4}"
+                required
+              /><br />
+              <select>
+                <option value="지인 추천">지인 추천</option>
+                <option value="커뮤니티">커뮤니티</option>
+                <option value="광고">광고</option>
+                <option value="이벤트">이벤트</option>
+                <option value="인터넷 검색">인터넷 검색</option>
+                <option value="기타">기타</option></select
+              ><br />
+              <div class="checkbox">
+                <input
+                  type="checkbox"
+                  name="news"
+                  value="yes"
+                  id="join_news"
+                  checked
+                /><label for="join_news"
+                  >정기적으로 뉴스레터를 구독합니다.</label
+                >
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="join_submit" type="submit">가입 완료</button>
+              <button class="join_cancel" type="submit">가입 취소</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer--container">
+        <img src="./image/logo.jpg" alt="logo" />
+        <div class="footer--title">HUFS<br />ART<br />CENTER</div>
+        <div>
+          02450 서울특별시 동대문구 이문로 107 Tel. 82-2-2173-2114<br />
+          홈페이지 제작자 <span>권소희 (juliette1017@hufs.ac.kr)</span><br />
+          Copyright ⓒ Hankuk University of Foreign Studies. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

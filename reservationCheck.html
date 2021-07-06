@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예매내역 확인하기</title>
+    <link rel="stylesheet" href="./reserve.css" />
+  </head>
+  <body>
+    <header class="reserve_header">
+      <img src="./image/logo.jpg" width="40px" alt="" />
+      <div><span class="reserve_date">예매내역 확인하기</span></div>
+      <div></div>
+    </header>
+    <section class="reservation_check">
+      <div class="reservation_list">
+        <span class="title">예매 내역</span>
+        <hr />
+        <div class="reserve_list"></div>
+      </div>
+      <div class="reservation_info">
+        <span class="title">예매 상세 정보</span>
+        <hr />
+        <div class="reservation_info_wrap">
+          <div class="info__poster">
+            <img class="info__poster-image" width="220" src="" alt="" />
+          </div>
+          <div class="info check">
+            <span class="reserve_title">제목을 선택하세요</span><br />
+            <div class="movie_info">
+              <span class="movie_info-age">-</span>&nbsp;|&nbsp;<span
+                class="movie_info-date"
+                >-</span
+              ><br /><span class="movie_info-genre">-</span>&nbsp;|&nbsp;<span
+                class="movie_info-runtime"
+                >-</span
+              >
+            </div>
+            <span class="info_title">상영</span
+            ><span class="info__theater">-</span><br />
+            <span class="info_title">일시</span><span class="info__date">-</span
+            ><br />
+            <span class="info_title">인원</span
+            ><span class="info__count">-</span><br />
+            <span class="info_title">좌석</span><span class="info__seat">-</span
+            ><br />
+            <button
+              class="reserve_cancel"
+              onmouseover="handleHover(event);"
+              onmouseout="handleUnhover(event);"
+              onclick="handleCancel(event);"
+            >
+              예매 취소
+            </button>
+          </div>
+        </div>
+        <p class="movie_info-desc"></p>
+      </div>
+    </section>
+    <script>
+      const reserveList = document.querySelector(".reserve_list");
+      const posterImage = document.querySelector(".info__poster-image");
+      const infoTitle = document.querySelector(".reserve_title");
+      const infoTheater = document.querySelector(".info__theater");
+      const infoDate = document.querySelector(".info__date");
+      const infoCount = document.querySelector(".info__count");
+      const infoSeat = document.querySelector(".info__seat");
+      const movieAge = document.querySelector(".movie_info-age");
+      const movieDate = document.querySelector(".movie_info-date");
+      const movieGenre = document.querySelector(".movie_info-genre");
+      const movieRuntime = document.querySelector(".movie_info-runtime");
+      const movieDesc = document.querySelector(".movie_info-desc");
+
+      const movieList = {
+        "그 시절 우리가 좋아했던 소녀": {
+          age: "15세 이상 관람가",
+          date: "2012년 8월 22일",
+          genre: "로맨스/드라마",
+          runtime: "1시간 50분",
+          desc: "영원히 내 눈 속의 사과 같은 너..그 때 너도 날 좋아했을까?이제 막 17살이 된 나, 커징텅(가진동)은 시도 때도 없이 서 있는 ‘발기’ 쉬보춘과 어떤 이야기건 꼭 등장하는 ‘뚱보’ 아허, 세상에서 자신이 가장 잘 생겼다고 생각하는 ‘머저리’ 라오차오, 재미 없는 유머로 여자들을 꼬시려는 ‘사타구니’ 랴오잉홍이라는 친구들이 있다. 고등학교에서도 같은 반이 된 친구들과의 유일한 공통점은 최고의 모범생 션자이(진연희)를 좋아한다는 것! 어느 날, 커징텅은 여느 때처럼 교실에서 사고를 친 덕분에 션자이에게 특별 감시를 받게 되고 이를 계기로 모범생과 문제아 사이 백 만년만큼의 거리가 점점 좁혀지는 듯 했다. 하지만 마음과 달리 잘해보려는 일도 자꾸만 어긋나고, 커징텅과는 달리 친구들은 션자이의 사랑을 얻기 위해 아낌없이 표현하고 경쟁한다. 게다가 애써 한 고백에 션자이는 대답하지 않는다. 그리고 15년 후 다시 만난 션자이는… 32살의 내가 17살 나에게 보내는 고백, 그 시절 너는 반짝반짝 빛이 났었다!",
+        },
+        미나리: {
+          age: "12세 이상 관람가",
+          date: "2021년 3월 3일",
+          genre: "드라마",
+          runtime: "1시간 56분",
+          desc: '"미나리는 어디서든 잘 자라"낯선 미국, 아칸소로 떠나온 한국 가족.가족들에게 뭔가 해내는 걸 보여주고 싶은 아빠 ‘제이콥’(스티븐 연)은자신만의 농장을 가꾸기 시작하고 엄마 ‘모니카’(한예리)도 다시 일자리를 찾는다.아직 어린 아이들을 위해 ‘모니카’의 엄마 ‘순자’(윤여정)가 함께 살기로 하고가방 가득 고춧가루, 멸치, 한약 그리고 미나리씨를 담은 할머니가 도착한다.의젓한 큰딸 ‘앤’(노엘 케이트 조)과 장난꾸러기 막내아들 ‘데이빗’(앨런 김)은여느 그랜마같지 않은 할머니가 영- 못마땅한데…함께 있다면, 새로 시작할 수 있다는 희망으로하루하루 뿌리 내리며 살아가는어느 가족의 아주 특별한 여정이 시작된다!',
+        },
+        "내일의 기억": {
+          age: "15세 이상 관람가",
+          date: "2021년 4월 29일",
+          genre: "미스터리/드라마",
+          runtime: "1시간 39분",
+          desc: "사고로 기억을 잃은 채 깨어난 수진 옆엔자상한 남편 지훈이 그녀를 세심하게 돌봐주고 있다.그리고 집에 돌아온 후,마주친 이웃들의 위험한 미래가 보이기 시작하자 수진은 혼란에 빠진다. 그러던 어느 날 길에서 만난 옛 직장 동료는수진을 걱정하며 지훈에 대한 믿기 힘든 소리를 하고,때마침 발견한 사진에서 사진 속 남편 자리엔 지훈이 아닌 다른 남자가 있다.설상가상 수진은 알 수 없는 남자가 자신을 위협하는 환영에 시달리는데……",
+        },
+        "비와 당신의 이야기": {
+          age: "전체관람가",
+          date: "2021년 4월 28일",
+          genre: "드라마",
+          runtime: "1시간 57분",
+          desc: "뚜렷한 꿈도 목표도 없이 지루한 삼수 생활을 이어가던 ‘영호’(강하늘),오랫동안 간직해온 기억 속 친구를 떠올리고 무작정 편지를 보낸다.자신의 꿈은 찾지 못한 채 엄마와 함께 오래된 책방을 운영하는 ‘소희’(천우희)는언니 ‘소연’에게 도착한 ‘영호’의 편지를 받게 된다.“몇 가지 규칙만 지켜줬으면 좋겠어.질문하지 않기, 만나자고 하기 없기 그리고 찾아오지 않기.”‘소희’는 아픈 언니를 대신해 답장을 보내고 두 사람은 편지를 이어나간다.우연히 시작된 편지는 무채색이던 두 사람의 일상을 설렘과 기다림으로 물들이기 시작하고,‘영호’는 12월 31일 비가 오면 만나자는 가능성이 낮은 제안을 하게 되는데...",
+        },
+        노매드랜드: {
+          age: "12세 이상 관람가",
+          date: "2021년 4월 15일",
+          genre: "드라마/서부극",
+          runtime: "1시간 50분",
+          desc: "전 세계가 동행한 가슴 벅찬 여정, 길이 계속되는 한 우리의 삶도 계속된다.모든 것이 무너진 후에야 비로소 열리는 새로운 길 그리고 희망경제적 붕괴로 도시 전체가 무너진 후 홀로 남겨진 ‘펀’.(프란시스 맥도맨드)추억이 깃든 도시를 떠나 작은 밴과 함께 한 번도 가보지 않은 낯선 길 위의 세상으로 떠난다.그 곳에서 ‘펀’은 각자의 사연을 가진 노매드들을 만나게 되고,광활한 자연과 길 위에서의 삶을 스스로 선택한 그들과 만나고 헤어지며다시 살아가기 위한 여정을 시작하는데…",
+        },
+        "더 스파이": {
+          age: "15세 이상 관람가",
+          date: "2929년 9월 10일",
+          genre: "스릴러/드라마",
+          runtime: "1시간 52분",
+          desc: "전운이 감도는 1960년 냉전시대, 소련 군사정보국 ‘올레크 대령’은정부의 눈을 피해 핵전쟁 위기를 막을 중대 기밀을 CIA에 전하고자 한다.CIA는 MI6와 협력하여 소련의 기밀 문서를 입수하기 위해영국 사업가 ‘그레빌 윈’을 스파이로 고용해 잠입에 성공한다.정체를 감춘 채 런던과 모스크바를 오가는 ‘그레빌 윈’과 ‘올레크 대령’의은밀하고 위험한 관계가 계속될수록 KGB의 의심은 커져가는데...가장 평범한 사람의 가장 위대한 첩보 실화때론, 한 사람의 용기가 세상을 바꾼다!",
+        },
+        서복: {
+          age: "청소년 관람불가",
+          date: "2021년 4월 15일",
+          genre: "SF/드라마",
+          runtime: "1시간 55분",
+          desc: "과거 트라우마를 안겨준 사건으로 인해 외부와 단절된 삶을 살아가고 있는 전직 요원 ‘기헌’은 정보국으로부터 거절할 수 없는 마지막 제안을 받는다.줄기세포 복제와 유전자 조작을 통해 만들어진 실험체 ‘서복’을 안전하게 이동시키는 일을 맡게 된 것.하지만 임무 수행과 동시에 예기치 못한 공격을 받게 되고, 가까스로 빠져나온 ‘기헌’과 ‘서복‘은 둘만의 특별한 동행을 시작하게 된다.실험실 밖 세상을 처음 만나 모든 것이 신기하기만 한 ‘서복‘과 생애 마지막 임무를 서둘러 마무리 짓고 싶은 ‘기헌’은 가는 곳마다 사사건건 부딪친다.한편, 인류의 구원이자 재앙이 될 수도 있는 ‘서복’을 차지하기 위해 나선 여러 집단의 추적은 점점 거세지고 이들은 결국 피할 수 없는 선택을 하게 되는데…",
+        },
+        "파리의 별빛 아래": {
+          age: "전체관람가",
+          date: "2021년 5월 5일",
+          genre: "드라마/코미디",
+          runtime: "1시간 30분",
+          desc: "홈리스와 난민 소년, 소외된 그들이 만든 파리의 기적!남모를 상처와 사연으로 홈리스의 삶을 살게 된 ‘크리스틴’세상의 외면과 냉대 속에서 삶을 이어가던 크리스틴 앞에 머물 곳도 엄마도 잃은 아프리카 난민 소년 ‘술리’가 나타난다.서로 말도 통하지 않지만 크리스틴은 술리의 엄마를 찾기 위해사람들의 차가운 시선을 견디며 자신이 꾸려 온 모든 걸 던지는데…",
+        },
+      };
+
+      const selected = {
+        title: null,
+        num: null,
+      };
+
+      function handleUnhover(event) {
+        const btn = event.target;
+        btn.style.color = "white";
+        btn.style.cursor = "default";
+      }
+
+      function handleHover(event) {
+        if (selected.title) {
+          const btn = event.target;
+          btn.style.color = "rgb(141, 113, 80)";
+          btn.style.cursor = "pointer";
+        }
+      }
+
+      function handleCancel(event) {
+        if (selected.title) {
+          const check = window.confirm("정말 취소하시겠습니까?");
+          if (check) {
+            const data = JSON.parse(localStorage.getItem("reservedList"));
+            const newData = data.filter(
+              (movie, index) => index !== selected.num - 1
+            );
+            localStorage.removeItem("reservedList");
+            localStorage.setItem("reservedList", JSON.stringify(newData));
+
+            reserveList.removeChild(reserveList.firstChild);
+            const ol = document.createElement("ol");
+            newData.forEach((movie, index) => {
+              const li = document.createElement("li");
+              li.innerText = index + 1 + ". " + movie.title;
+              li.addEventListener("click", handleClick);
+              ol.appendChild(li);
+            });
+            reserveList.appendChild(ol);
+
+            posterImage.src = "";
+            infoTitle.innerHTML = "제목을 선택하세요";
+            infoDate.innerHTML = "-";
+            infoTheater.innerHTML = "-";
+            infoCount.innerHTML = "-";
+            infoSeat.innerHTML = "-";
+
+            movieAge.innerHTML = "-";
+            movieDate.innerHTML = "-";
+            movieGenre.innerHTML = "-";
+            movieRuntime.innerHTML = "-";
+            movieDesc.innerHTML = "-";
+
+            window.alert("예매가 취소되었습니다.");
+          }
+        }
+      }
+
+      function handleClick(event) {
+        const num = event.target.innerHTML.split(".")[0];
+        selected.num = num;
+        const data = JSON.parse(localStorage.getItem("reservedList"))[num - 1];
+
+        const year = parseInt(data.date / 10000) + "";
+        let month = parseInt((data.date % 10000) / 100) + "";
+        let day = parseInt(data.date % 100) + "";
+        month = month.length < 2 ? "0" + month : month;
+        day = day.length < 2 ? "0" + day : day;
+
+        posterImage.src = `./image/${data.title}.jpg`;
+        selected.title = data.title;
+        infoTitle.innerHTML = data.title;
+        infoDate.innerHTML = year + "-" + month + "-" + day + " " + data.time;
+        infoTheater.innerHTML = "HUFS아트센터 " + data.theater;
+        infoCount.innerHTML = data.count + "명";
+        infoSeat.innerHTML = data.seat;
+
+        const movieInfo = movieList[data.title];
+        movieAge.innerHTML = movieInfo.age;
+        movieDate.innerHTML = movieInfo.date;
+        movieGenre.innerHTML = movieInfo.genre;
+        movieRuntime.innerHTML = movieInfo.runtime;
+        movieDesc.innerHTML = movieInfo.desc;
+      }
+
+      function init() {
+        const data = JSON.parse(localStorage.getItem("reservedList"));
+
+        const ol = document.createElement("ol");
+        data.forEach((movie, index) => {
+          const li = document.createElement("li");
+          li.innerText = index + 1 + ". " + movie.title;
+          li.addEventListener("click", handleClick);
+          ol.appendChild(li);
+        });
+        reserveList.appendChild(ol);
+      }
+
+      init();
+    </script>
+  </body>
+</html>
