@@ -285,7 +285,7 @@
 
         seatList.forEach((seat) => {
           seat.addEventListener("click", handleClick);
-          savedData.forEach(d => {
+          savedData && savedData.forEach(d => {
             if (data.title === d.title && data.date === d.date && data.time === d.time) {
               d.seat.forEach(s => {
               if (s === seat.innerHTML) seat.classList.add("reserved");
